@@ -1,15 +1,17 @@
 
 import './App.css';
-import Nav from './Nav';
+import Nav from './components/Nav';
+import Form from './components/Form';
 
 function App() {
 
   return (
     <div>
       <Nav />
+      <Form />
       <header>
         <h2>Date Received</h2>
-        <h2>Net Gift Amount</h2>
+        <h2>Net Gift Amount (in USD)</h2>
       </header>
       {payouts.data.map((data) => {
 
@@ -20,7 +22,7 @@ function App() {
         return (
           <ul className="columns">
             <li>{date.toLocaleDateString("en-US")}</li>
-            <li>{amount}</li>
+            <li>${amount}</li>
           </ul>
         )
       })};
