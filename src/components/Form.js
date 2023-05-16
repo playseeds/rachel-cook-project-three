@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const Form = () => {
 
     //Create a stateful variable to hold the user's date choice
-    const [chosenDate, setChosenDate] = useState(""); //should what's inside the () be a string because it'll be a date inputted in the date form? 
+    const [chosenDate, setChosenDate] = useState(); //should what's inside the () be a string because it'll be a date inputted in the date form? 
 
     useEffect(() => {
         //can I filter the API date already returned by the API call in App.js?
@@ -19,19 +19,23 @@ const Form = () => {
         //     setChosenDate(response.data.arrival_date * 1000);
 
         // });
-
+        console.log(chosenDate);
     }, []);
 
     return (
-        <div className="form">
-            <form>
-                <label htmlFor="date">Please select the date you'd like to view:</label>
-                <input className="form" type="date" id="date"
-                    min="2013-02-22"
-                    max="2023-12-31">
-                </input>
-            </form>
-        </div>
+        //Credit: got help figuring out how to hold a selected date in state from this tutorial: https://www.youtube.com/watch?v=dobnC4p5PYw
+        <>
+            <div className="form">
+                <form>
+                    <label htmlFor="date">Please  select the date you'd like to view:</label>
+                    <input className="form" type="date" id="date"
+                        placeholder="dd-mm-yyyy"
+                        min="2013-02-22"
+                        max="2023-12-31" onChange={e => setChosenDate(e.target.value)} />
+                </form>
+            </div>
+            {/* how do I then get React to filter the data to print the ChosenDate to the page? */}
+        </>
     )
 }
 
