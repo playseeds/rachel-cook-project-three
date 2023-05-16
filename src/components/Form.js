@@ -5,22 +5,22 @@ const Form = () => {
     //Create a stateful variable to hold the user's date choice
     const [chosenDate, setChosenDate] = useState(); //should what's inside the () be a string because it'll be a date inputted in the date form? 
 
-    useEffect(() => {
-        //can I filter the API date already returned by the API call in App.js?
+    // useEffect(() => {
+    //     //can I filter the API date already returned by the API call in App.js?
 
 
-        // const stripe = require('stripe')('sk_test_51HTHi2Hvy5NeCPEsFMyNF55MzJSDciOw2Qmp4KS4DLaf51eFUxDQcDu4dHfOc7PcqmyTbFHfKh3GhjhVDfmmWE21009ZNmVRCE');
+    //     // const stripe = require('stripe')('sk_test_51HTHi2Hvy5NeCPEsFMyNF55MzJSDciOw2Qmp4KS4DLaf51eFUxDQcDu4dHfOc7PcqmyTbFHfKh3GhjhVDfmmWE21009ZNmVRCE');
 
-        // const payouts = await stripe.payouts.list({
-        //     limit: 1000
-        // });
-        // .then((res) => {
+    //     // const payouts = await stripe.payouts.list({
+    //     //     limit: 1000
+    //     // });
+    //     // .then((res) => {
 
-        //     setChosenDate(response.data.arrival_date * 1000);
+    //     //     setChosenDate(response.data.arrival_date * 1000);
 
-        // });
-        console.log(chosenDate);
-    }, []);
+    //     // });
+    //     console.log(chosenDate);
+    // });
 
     return (
         //Credit: got help figuring out how to hold a selected date in state from this tutorial: https://www.youtube.com/watch?v=dobnC4p5PYw

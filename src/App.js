@@ -12,13 +12,7 @@ const payouts = await stripe.payouts.list({
 
 function App() {
 
-  const [date, setDate] = useState();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setDate();
-    }
-  }, []);
+  // const [date, setDate] = useState();
 
   // useEffect(() => {
   //   //handling the Stripe API call
@@ -57,11 +51,11 @@ function App() {
         return (
           <ul className="columns">
             {/* how do i access the id within the array to address the below console error? */}
-            {
+            {/* {
               payouts.data.map((data) => {
                 return
 
-              })}
+              })} */}
 
             <li key={data.id}>
               {date.toLocaleDateString("en-US")}
