@@ -2,8 +2,26 @@
 import './App.css';
 import Nav from './components/Nav';
 import Form from './components/Form';
+import { useEffect } from 'react';
 
 function App() {
+
+  // useEffect(() => {
+  //   //handling the Stripe API call
+  //   const stripe = require('stripe')('sk_test_51HTHi2Hvy5NeCPEsFMyNF55MzJSDciOw2Qmp4KS4DLaf51eFUxDQcDu4dHfOc7PcqmyTbFHfKh3GhjhVDfmmWE21009ZNmVRCE');
+
+  //   const payouts = await stripe.payouts.list({
+  //     limit: 1000
+  //   })
+  //   .then(res => {
+  //     //storing the API data
+  //     const apiResults = res.payouts.data;
+  //     //map over the original API results array to extract the two pieces of data we want (?)
+
+  //     const dateAndAmount = apiResults.map
+  //   })
+
+  // })
 
   return (
     <div>
