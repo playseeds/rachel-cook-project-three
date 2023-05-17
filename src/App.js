@@ -13,13 +13,31 @@ const payouts = await stripe.payouts.list({
 
 function App() {
 
-  //Creating a stateful variable to hold the user's date choice
-  const [chosenDate, setChosenDate] = useState();
+  //Credit: Tried to adapt Esther's recent Unsplash API lesson to make the below work.
+
+  //Creating a stateful variable to hold the user's date choice in the form
+  const [chosenDate, setChosenDate] = useState(); 
+
+  //this function is meant to handle form submission & filtering the date choice and its related amount
+  const getDate = (event, chosenDate) => {
+    event.preventDefault();
+
+    //trying to loop over the date array to return only the data for the date selected in the form
+    
+    const filteredDate = chosenDate.filter
+    
+    // (correctSelection => {
+    //   return date === chosenDate
+    // })
+
+    setChosenDate(filteredDate);
+
+  }
 
   return (
     <div className="App">
       <Nav />
-      <Form chosenDate />
+      <Form setChosenDate />
       <header>
         <h2>Date Received</h2>
         <h2>Net Gift Amount (in USD)</h2>
@@ -31,6 +49,7 @@ function App() {
         let amount = data.amount / 100;
 
         return (
+          //here I'm returning all of the date and amount data available to display it in columns, because I realized this would be more useful for our business needs
           <ul className="columns">
             {/* how do i access the id, which is within an object within the array, to address the below console error?  data.id in line 46 isn't working */}
             <li key={data.id}>
