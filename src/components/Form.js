@@ -14,15 +14,10 @@ const Form = (setChosenDate) => {
                         min="2013-02-22"
                         max="2023-12-31" onChange={e => setChosenDate(e.target.value)} />
                 </form>
+                {/* is there where I'd get React to display setChosenDate on the page? */}
             </div>
         </>
     )
-    //     //how do I filter the API data here to only show date and amount for the chosen date?
-    //     { if date === chosenDate {
-    //     return (date)
-    // } else {
-    //     return <ErrorMessage />
-    // }
 }
 
 export default Form;
