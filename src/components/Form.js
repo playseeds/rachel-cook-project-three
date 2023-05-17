@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Form = () => {
 
     //Create a stateful variable to hold the user's date choice
     const [chosenDate, setChosenDate] = useState(); //should what's inside the () be a string because it'll be a date inputted in the date form? 
+
+    console.log(chosenDate);
 
     // useEffect(() => {
     //     //can I filter the API date already returned by the API call in App.js?

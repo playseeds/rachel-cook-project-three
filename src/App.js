@@ -2,7 +2,7 @@
 import './App.css';
 import Nav from './components/Nav';
 import Form from './components/Form';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
 const stripe = require('stripe')('sk_test_51HTHi2Hvy5NeCPEsFMyNF55MzJSDciOw2Qmp4KS4DLaf51eFUxDQcDu4dHfOc7PcqmyTbFHfKh3GhjhVDfmmWE21009ZNmVRCE');
 
