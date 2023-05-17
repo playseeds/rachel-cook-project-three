@@ -1,13 +1,11 @@
 import { useState } from "react";
 
-const Form = () => {
+const Form = ( chosenDate ) => {
 
-    //Create a stateful variable to hold the user's date choice
-    const [chosenDate, setChosenDate] = useState();
-    const [ records, setRecords ] = useState(chosenDate);
+    // const [ records, setRecords ] = useState(chosenDate);
 
     const filter = (e) => {
-        setRecords(chosenDate.filter(f => f.data.arrival_date().includes(e.target.value)))
+        chosenDate.filter(f => f.data.arrival_date().includes(e.target.value))
     }
 
     return (
