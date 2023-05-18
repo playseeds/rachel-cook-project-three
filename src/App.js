@@ -2,7 +2,7 @@
 import './App.css';
 import Nav from './components/Nav';
 import Form from './components/Form';
-import ErrorMessage from './components/ErrorMessage';
+// import ErrorMessage from './components/ErrorMessage';
 import { useState, useEffect } from 'react';
 
 // calling the Stripe API 
@@ -14,8 +14,7 @@ const payouts = await stripe.payouts.list({
 
 function App() {
 
-  //Creating stateful variables to hold API results and the user's date choice 
-  const [apiResults, setApiResults] = useState(payouts.data);
+  const [apiResults, ] = useState(payouts.data);
   const [chosenDate, setChosenDate] = useState(""); 
   const [filteredData, setFilteredData] = useState([]);
 
@@ -34,7 +33,7 @@ function App() {
 
       setFilteredData(filteredArray);
 
-    // }
+    // } //how do I create a conditional for ErrorMessage here when was advised to use return above, rather than a conditional, for dateConversion === chosenDate?
     // else{
     //   return <ErrorMessage />
     }
