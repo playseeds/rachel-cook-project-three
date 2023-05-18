@@ -14,8 +14,8 @@ const payouts = await stripe.payouts.list({
 
 function App() {
 
-  const [apiResults, ] = useState(payouts.data);
-  const [chosenDate, setChosenDate] = useState(""); 
+  const [apiResults,] = useState(payouts.data);
+  const [chosenDate, setChosenDate] = useState("");
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
@@ -33,9 +33,9 @@ function App() {
 
       setFilteredData(filteredArray);
 
-    // } //how do I create a conditional for ErrorMessage here when was advised to use return above, rather than a conditional, for dateConversion === chosenDate?
-    // else{
-    //   return <ErrorMessage />
+      // } //how do I create a conditional for ErrorMessage here when was advised to use return above, rather than a conditional, for dateConversion === chosenDate?
+      // else{
+      //   return <ErrorMessage />
     }
 
   }, [chosenDate, apiResults])
@@ -57,11 +57,10 @@ function App() {
         return (
           //here I'm returning all of the date and amount data available to display it in columns, because I realized this would be more useful for our business needs
           <ul className="columns">
-            {/* how do i access the id, which is within an object within the array, to address the below console error?  data.id in line 46 isn't working */}
-            <li key={data.id}>
+            <li key={crypto.randomUUID()}>
               {date.toLocaleDateString("en-US")}
             </li>
-            <li>${amount}</li>
+            <li key={crypto.randomUUID()}>${amount}</li>
           </ul>
         )
       })};
