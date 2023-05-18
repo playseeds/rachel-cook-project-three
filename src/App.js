@@ -29,13 +29,15 @@ function App() {
 
         return dateConversion === chosenDate;
 
+        // //Not sure why ErrorMessage won't render:
+        
+        // // if dateConversion !== chosenDate{
+        //   return <ErrorMessage />
+        // } 
+    
       })
 
       setFilteredData(filteredArray);
-
-      // } //how do I create a conditional for ErrorMessage here when was advised to use return above, rather than a conditional, for dateConversion === chosenDate?
-      // else{
-      //   return <ErrorMessage />
     }
 
   }, [chosenDate, apiResults])
